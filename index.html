@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My phone-book</title>
+    <!--styles css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--scripts -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="pizzaMenu">
+    <input type="text" ng-model="query">
+    <section ng-controller="pizzaMenuCtrl" id="pizzaMenu-list">
+        <div class="content-wr flex">
+            <pizza-card
+                    class="col"
+                    ng-repeat="pizza in pizzas | filter:query"
+                    pizza="pizza">
+            </pizza-card>
+        </div>
+    </section>
+</body>
+</html>
