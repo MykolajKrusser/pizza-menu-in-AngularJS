@@ -1,13 +1,14 @@
-
-    <a href="#" class="pizzaCard-img">
+ <a href="#">
         <img ng-src="{{'img/' + pizza.photo}}" alt="" class="photo">
-    </a>
-    <div class="pizzaCard-info">
-        <h4 class="">{{pizza.name}}</h4>
-        <p>{{pizza.dough}}</p>
-        <p>{{pizza.cheese}}</p>
-        <p>{{pizza.meet}}</p>
-        <p>{{pizza.vegetables}}</p>
-        <p>{{pizza.sauce}}</p>
-        <p>{{pizza.price}}$</p>
-    </div>
+ </a>
+ <div class="pizzaCard-info flex">
+     <div>
+         <h2>{{pizza.name}}</h2>
+         <p>dough: {{pizza.dough}}</p>
+         <p>Ingredients: {{pizza.cheese}}, {{pizza.meet}},
+             {{pizza.vegetables}}, {{pizza.sauce}}</p>
+
+     </div>
+     <p class="price">Price:{{pizza.price}}$</p>
+     <a href="#" class="btn">Order Online</a>
+ </div>

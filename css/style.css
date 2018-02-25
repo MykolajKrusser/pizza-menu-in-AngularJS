@@ -1,8 +1,13 @@
+/*
+Main settings
+ */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     min-height: 100%;
+    background-color: #ffae41;
+    letter-spacing: 1px;
 }
 a {
     text-decoration: none;
@@ -21,13 +26,74 @@ section {
     max-width: 1200px;
     margin: 0 auto;
 }
+h1{
+    font-size: 30px;
+    color: #41484a;
+}
+/*
+filter Input
+ */
+.container{
+    width: 0;
+    height: 50px;
+    background: #41484a;
+    text-align: center;
+    line-height: 45px;
+    padding-right: 50px;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 
+.input{
+    border: 0;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    width: 0;
+    padding: 5px 0;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.container .fa{
+    color: #ffffff;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.container.active{
+    width: 250px;
+    padding-left: 25px;
+    transition: all 0.5s ease;
+}
+
+.input.active{
+    width: 98%;
+    padding-left: 5px;
+    transition: all 0.5s 0.8s ease;
+}
+
+input::placeholder {
+    color: #fff;
+}
+/*
+pizza template
+ */
 #pizzaMenu-list{
-    background: #e2e2e2;
+    margin: 10px 0 50px 0;
+    background: #41484A;
     min-height: 100vh;
     box-sizing: border-box;
     font-family: "Times New Roman", sans-serif;
     font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 #pizzaMenu-list>.content-wr>.flex {
     margin: 0 -15px;
@@ -35,14 +101,21 @@ section {
 pizza-card{
     margin: 15px;
     box-sizing: border-box;
-    background: #FFFFFF;
+    background: #41484A;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     text-align: center;
     align-items: center;
+    color: white;
     border: 1px solid transparent;
-    border-radius: 10%;
+    border-bottom:1px solid white;
+}
+/*
+pizza - card width
+ */
+.column2{
+    width: calc(50% - 30px);
 }
 .col{
     width: calc(20% - 30px);
@@ -68,6 +141,33 @@ pizza-card{
     border: 1px solid transparent;
     border-radius: 50%;
 }
-.pizzaCard-info>*{
-    margin: 5px;
+.pizzaCard-info{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.pizzaCard-info>div>*{
+    margin: 10px;
+}
+.price {
+    font-size: 22px;
+    margin-top: auto;
+}
+.btn{
+    margin: 0 auto 15px auto;
+    background-color: #c8102e;
+    border: 2px solid #c8102e;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: .75em 1.5em;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 300ms ease-out;
+}
+.btn:hover{
+    background-color: #b4102f;
+    transition: background-color 300ms ease-out;
 }

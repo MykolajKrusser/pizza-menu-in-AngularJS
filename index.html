@@ -6,19 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--styles css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--scripts -->
     <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/animation.js"></script>
 </head>
-<body ng-app="pizzaMenu">
-    <input type="text" ng-model="query">
-    <section ng-controller="pizzaMenuCtrl" id="pizzaMenu-list">
-        <div class="content-wr flex">
-            <pizza-card
-                    class="col"
-                    ng-repeat="pizza in pizzas | filter:query"
-                    pizza="pizza">
-            </pizza-card>
+<body ng-app="pizzaMenu" >
+    <section class="content-wr">
+        <h1>Pizza Menu</h1>
+        <div class="container">
+            <input ng-model="query" type="text" class="input" placeholder="Filter price ingredients dough">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <div ng-controller="pizzaMenuCtrl" id="pizzaMenu-list">
+            <div class="content-wr flex">
+                <pizza-card
+                        class="col"
+                        ng-repeat="pizza in pizzas | filter:query"
+                        pizza="pizza">
+                </pizza-card>
+            </div>
         </div>
     </section>
 </body>

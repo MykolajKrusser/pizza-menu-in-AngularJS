@@ -1,3 +1,4 @@
+'use strict';
 var app = angular.module('pizzaMenu', []);
 app.controller('pizzaMenuCtrl', ['$scope', function (scope) {
     scope.pizzas = [
@@ -35,7 +36,7 @@ app.controller('pizzaMenuCtrl', ['$scope', function (scope) {
             "name":"Quattro Stagioli Pizza",
             "price":"12",
             "dough":"italiana",
-            "cheese":"pecorino, mozzarella",
+            "cheese":"pecorino",
             "meet":"shoe",
             "vegetables":"olives, bocconcini, broccoli, cherry peppers, mushrooms",
             "sauce":"San Marzano",
@@ -45,7 +46,7 @@ app.controller('pizzaMenuCtrl', ['$scope', function (scope) {
             "name":"Meatball Pizza",
             "price":"12",
             "dough":"americana",
-            "cheese":"mozzarella, pecorino",
+            "cheese":"pecorino",
             "meet":"cooked meatballs",
             "vegetables":"no vegetables",
             "sauce":"tomato sauce",
@@ -55,7 +56,7 @@ app.controller('pizzaMenuCtrl', ['$scope', function (scope) {
             "name":"Meat-Olive",
             "price":"10",
             "dough":"americana",
-            "cheese":" mozzarella",
+            "cheese":"mozzarella",
             "meet":"cooked meatballs",
             "vegetables":"Kalamata olives",
             "sauce":"tomato sauce",
@@ -73,9 +74,9 @@ app.controller('pizzaMenuCtrl', ['$scope', function (scope) {
         },
         {
             "name":"Onion-Ricotta Pizza",
-            "price":"7",
+            "price":"10",
             "dough":"italiana",
-            "cheese":"cheddar, ricotta",
+            "cheese":"cheddar",
             "meet":"bacon",
             "vegetables":"no vegetables",
             "sauce":"maple syrup",
@@ -93,9 +94,9 @@ app.controller('pizzaMenuCtrl', ['$scope', function (scope) {
         },
         {
             "name":"Potato-Rosemary Pizza",
-            "price":"4",
+            "price":"6",
             "dough":"italiana",
-            "cheese":"pecorino",
+            "cheese":"ricotta",
             "meet":"no meet",
             "vegetables":"rosemary, potato",
             "sauce":"no sause",
